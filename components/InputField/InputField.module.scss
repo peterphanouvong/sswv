@@ -1,0 +1,24 @@
+.ssw-input-field {
+  display: flex;
+  flex-direction: column;
+}
+
+.ssw-input-field__label {
+  @include type-subhead-1;
+
+  margin-bottom: $token-size-base-space-small-2;
+}
+
+.ssw-input-field__input {
+  border-radius: $token-size-border-radius-1;
+  background-color: $token-color-base-grey-50;
+  border: 1px solid $token-color-base-grey-50;
+  outline: none;
+  padding: $token-size-base-space-small-3;
+  width: 100%;
+  block-size: 3rem;
+
+  &:focus {
+    border: 1px solid $token-color-base-grey-900;
+  }
+}

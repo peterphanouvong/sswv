@@ -1,0 +1,55 @@
+@mixin type-body-1 {
+  font-size: $token-type-body-1-size;
+  font-weight: $token-type-body-1-weight;
+  letter-spacing: $token-type-body-1-spacing;
+  line-height: $token-type-body-1-height;
+}
+
+@mixin type-body-2 {
+  font-size: $token-type-body-2-size;
+  font-weight: $token-type-body-2-weight;
+  letter-spacing: $token-type-body-2-spacing;
+  line-height: $token-type-body-2-height;
+}
+
+@mixin type-headline-1 {
+  font-size: $token-type-headline-1-size;
+  font-weight: $token-type-headline-1-weight;
+  letter-spacing: $token-type-headline-1-spacing;
+  line-height: $token-type-headline-1-height;
+}
+
+@mixin type-headline-2 {
+  font-size: $token-type-headline-2-size;
+  font-weight: $token-type-headline-2-weight;
+  letter-spacing: $token-type-headline-2-spacing;
+  line-height: $token-type-headline-2-height;
+}
+
+@mixin type-headline-3 {
+  font-size: $token-type-headline-3-size;
+  font-weight: $token-type-headline-3-weight;
+  letter-spacing: $token-type-headline-3-spacing;
+  line-height: $token-type-headline-3-height;
+}
+
+@mixin type-headline-4 {
+  font-size: $token-type-headline-4-size;
+  font-weight: $token-type-headline-4-weight;
+  letter-spacing: $token-type-headline-4-spacing;
+  line-height: $token-type-headline-4-height;
+}
+
+@mixin type-subhead-1 {
+  font-size: $token-type-subhead-1-size;
+  font-weight: $token-type-subhead-1-weight;
+  letter-spacing: $token-type-subhead-1-spacing;
+  line-height: $token-type-subhead-1-height;
+}
+
+@mixin type-button-1 {
+  font-size: $token-type-button-1-size;
+  font-weight: $token-type-button-1-weight;
+  letter-spacing: $token-type-button-1-spacing;
+  line-height: $token-type-button-1-height;
+}

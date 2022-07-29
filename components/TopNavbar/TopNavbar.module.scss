@@ -1,0 +1,27 @@
+.ssw-top-nav {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem 2rem;
+
+  &__list {
+    display: flex;
+    gap: 1rem;
+    list-style: none;
+  }
+
+  &__user-section {
+    align-items: center;
+    display: flex;
+    gap: 1rem;
+
+    &__name {
+      display: block;
+    }
+
+    &__sign-out {
+      font-size: 14px;
+      color: #333;
+    }
+  }
+}

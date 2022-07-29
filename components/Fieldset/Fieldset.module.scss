@@ -1,0 +1,14 @@
+.ssw-fieldset {
+  margin-top: $token-size-base-space-large-3;
+}
+
+.ssw-fieldset__legend {
+  @include type-headline-4;
+  margin-bottom: $token-size-base-space-medium-1;
+}
+
+.ssw-fieldset__description {
+  @include type-body-2;
+  display: block;
+  margin-top: $token-size-base-space-small-1;
+}

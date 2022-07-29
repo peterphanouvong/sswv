@@ -1,7 +1,15 @@
-import '../styles/globals.css'
+import "../styles/globals.scss";
+import { KindeProvider } from "@kinde-oss/kinde-auth-nextjs";
+import { AppProvider } from "../context/state";
 
 function MyApp({ Component, pageProps }) {
-  return <Component {...pageProps} />
+  return (
+    <AppProvider>
+      <KindeProvider>
+        <Component {...pageProps} />
+      </KindeProvider>
+    </AppProvider>
+  );
 }
 
-export default MyApp
+export default MyApp;

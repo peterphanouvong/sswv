@@ -1,0 +1,16 @@
+.ssw-avatar {
+  align-items: center;
+  background-color: $token-color-base-grey-50;
+  border-radius: 50%;
+  display: flex;
+  inline-size: $token-size-avatar-medium-1;
+  justify-content: center;
+  user-select: none;
+  block-size: $token-size-avatar-medium-1;
+
+  &--large {
+    @include type-headline-4;
+    block-size: $token-size-avatar-large-1;
+    inline-size: $token-size-avatar-large-1;
+  }
+}

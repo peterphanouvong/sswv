@@ -2,33 +2,24 @@ import Link from "next/link";
 import styles from "./TopNavbar.module.scss";
 import Avatar from "../Avatar/Avatar";
 import { useAppContext } from "../../context/state";
-import { useKindeAuth } from "@kinde-oss/kinde-auth-nextjs";
-import { useEffect } from "react";
 import { useUser } from "../../hooks/useUser";
 
 const TopNavbar = () => {
-  const { isAuthenticated, user: oauthUser } = useKindeAuth();
   const appState = useAppContext();
-  const { user, isLoading } = useUser(appState.oauthUser?.id);
-
-  useEffect(() => {
-    appState.setOauthUser(oauthUser);
-    appState.setIsAuthenticated(isAuthenticated);
-    appState.setIsLoading(isLoading);
-  }, [appState, isAuthenticated, isLoading, oauthUser]);
+  const { user } = useUser(appState.oauthUser?.id);
 
   return (
     <div className={styles["ssw-top-nav"]}>
       <Link href="/">SSWV</Link>
       {user ? (
         <div className={styles["ssw-top-nav__user-section"]}>
-          <Link href={`/profile/${appState.oauthUser.id}`}>
+          <Link href={`/profile`}>
             <a>
               <Avatar firstName={user.firstName} lastName={user.lastName} />
             </a>
           </Link>
           <div>
-            <Link href={`/profile/${appState.oauthUser.id}`}>
+            <Link href={`/profile`}>
               <a className={styles["ssw-top-nav__user-section__name"]}>
                 {user.firstName} {user.lastName}
               </a>
@@ -43,11 +34,27 @@ const TopNavbar = () => {
       ) : (
         <ul className={styles["ssw-top-nav__list"]}>
           <li className={styles["ssw-top-nav__list__item"]}>
-            <Link href="/api/auth/login">Log in</Link>
+            <Link
+              href={{
+                pathname: "/api/auth/login",
+                query: {
+                  org_code: "org_adb7e115b77",
+                },
+              }}
+            >
+              Log in
+            </Link>
           </li>
 
           <li className={styles["ssw-top-nav__list__item"]}>
-            <Link href="/api/auth/register">Register</Link>
+            <Link
+              href={{
+                pathname: "/api/auth/register",
+                query: { org_code: "org_adb7e115b77" },
+              }}
+            >
+              Register
+            </Link>
           </li>
         </ul>
       )}

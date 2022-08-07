@@ -22,3 +22,16 @@
     border: 1px solid $token-color-base-grey-900;
   }
 }
+
+.ssw-input-field__input--small {
+  width: 210px;
+}
+
+.ssw-input-field__input--medium {
+  width: 280px;
+}
+
+.ssw-input-field__input--large,
+.ssw-input-field__input--email {
+  width: 420px;
+}

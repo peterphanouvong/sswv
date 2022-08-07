@@ -1,0 +1,26 @@
+.ssw-left-nav {
+  width: 272px;
+  padding: 3rem;
+
+  ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    font-weight: 500;
+
+    li + li {
+      margin-top: $token-size-base-space-small-2;
+    }
+
+    li a:hover {
+      text-decoration: underline;
+      text-decoration-thickness: 2px;
+      text-underline-offset: 2px;
+    }
+  }
+}
+
+.ssw-left-nav__title {
+  @include type-headline-4;
+  margin-bottom: $token-size-base-space-large-2;
+}

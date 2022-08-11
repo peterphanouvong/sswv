@@ -1,11 +1,11 @@
 import useSWR from "swr";
 import { fetcher } from "../utils/fetcher";
 
-export function useUser(id) {
-  const { data, error } = useSWR(`/api/user/${id}`, fetcher);
+export function useKindeToken() {
+  const { data, error } = useSWR(`/api/auth/get-token`, fetcher);
 
   return {
-    user: data,
+    token: data,
     isLoading: !error && !data,
     isError: error,
   };

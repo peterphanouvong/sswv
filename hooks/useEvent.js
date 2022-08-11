@@ -1,11 +1,11 @@
 import useSWR from "swr";
 import { fetcher } from "../utils/fetcher";
 
-export function useUser(id) {
-  const { data, error } = useSWR(`/api/user/${id}`, fetcher);
+export function useEvent(id) {
+  const { data, error } = useSWR(`/api/event/${id}`, fetcher);
 
   return {
-    user: data,
+    event: data,
     isLoading: !error && !data,
     isError: error,
   };

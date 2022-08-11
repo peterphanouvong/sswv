@@ -28,10 +28,14 @@ model Profile {
 
 model Event {
   id                Int         @id @default(autoincrement())
+  name              String
   startTime         DateTime?   @default(now())
   endTime           DateTime?
   price             Decimal?
   location          String?
+  // description
+  // video
+  
 }
 
 model ActiveKidsVoucher {

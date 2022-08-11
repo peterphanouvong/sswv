@@ -1,10 +1,8 @@
 import { useAppContext } from "../../context/state";
 import { useUser } from "../../hooks/useUser";
-import { Button } from "../Button/Button";
-import { Container } from "../Container/Container";
-import { Fieldset } from "../Fieldset/Fieldset";
 import { FormItem } from "../FormItem/FormItem";
-import { InputField } from "../InputField/InputField";
+import { InputField } from "../InputField/InputField.tsx";
+import { Button } from "baseui/button";
 
 const ProfileVolleyInfoForm = () => {
   const { oauthUser } = useAppContext();
@@ -25,7 +23,7 @@ const ProfileVolleyInfoForm = () => {
         <InputField type="date" label="Expiry date" name="vnswId" />
       </FormItem>
 
-      <Button text="Save" />
+      <Button>Save</Button>
     </form>
   );
 };

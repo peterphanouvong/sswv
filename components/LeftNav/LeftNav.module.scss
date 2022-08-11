@@ -1,6 +1,7 @@
 .ssw-left-nav {
   width: 272px;
   padding: 3rem;
+  position: relative;
 
   ul {
     list-style: none;
@@ -23,4 +24,10 @@
 .ssw-left-nav__title {
   @include type-headline-4;
   margin-bottom: $token-size-base-space-large-2;
+}
+
+.ssw-left-nav__back {
+  @include type-body-2;
+  position: absolute;
+  top: 1.5rem;
 }

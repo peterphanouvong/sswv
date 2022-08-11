@@ -1,5 +1,5 @@
 // Next.js API route support: https://nextjs.org/docs/api-routes/introduction
 
 export default function handler(req, res) {
-  res.status(200).json(req.cookies.kinde_token || {});
+  res.status(200).json(JSON.parse(req.cookies.kinde_token));
 }

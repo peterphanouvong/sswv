@@ -1,8 +1,9 @@
-import { InputField } from "../InputField/InputField";
-import { FormItem } from "../FormItem/FormItem";
 import { useUser } from "../../hooks/useUser";
-import { Button } from "../Button/Button";
 import { useAppContext } from "../../context/state";
+import { Button } from "baseui/button";
+import { FormControl } from "baseui/form-control";
+import { InputField } from "../InputField/InputField.tsx";
+import { FormItem } from "../FormItem/FormItem";
 
 export const ProfileForm = () => {
   const { oauthUser, isAuthenticated } = useAppContext();
@@ -15,39 +16,44 @@ export const ProfileForm = () => {
       <input name="id" type="hidden" value={user.id} />
       <FormItem>
         <InputField
-          defaultValue={user.firstName}
-          name={"firstName"}
+          initialState={{
+            value: user.firstName,
+          }}
+          name="firstName"
           label="First name"
         />
       </FormItem>
-
       <FormItem>
         <InputField
-          defaultValue={user.lastName}
-          name={"lastName"}
+          initialState={{
+            value: user.lastName,
+          }}
+          name="lastName"
           label="Last name"
         />
       </FormItem>
-
       <FormItem>
         <InputField
           type="email"
-          defaultValue={user.email}
-          name={"email"}
+          initialState={{
+            value: user.email,
+          }}
+          name="email"
           label="Email"
         />
       </FormItem>
 
       <FormItem>
         <InputField
-          defaultValue={user.profile.vnswId}
-          label="Volleyball Australia ID"
+          initialState={{
+            value: user.profile.vnswId,
+          }}
           name="vnswId"
-          size="small"
+          label="Volleyball Australia ID"
         />
       </FormItem>
 
-      <Button type="submit" text="Save" />
+      <Button type="submit">Save</Button>
     </form>
   );
 };
